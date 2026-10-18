@@ -1,0 +1,309 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff3f6">
+    <meta name="description" content="A little something special for Queen. 💗">
+    <title>For Queen 💗</title><style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --rose: #c04468;
+        --wine: #68243e;
+        --cream: #fffaf8;
+        --text: #745663;
+    }
+
+    body {
+        min-height: 100vh;
+        min-height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow-x: hidden;
+        padding: 24px;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--text);
+        background: linear-gradient(
+            145deg,
+            #fff9f6,
+            #f8dfe7,
+            #f3d0dd
+        );
+    }
+
+    .floating-heart {
+        position: fixed;
+        color: #bd5277;
+        opacity: 0.5;
+        pointer-events: none;
+        animation: float 5s ease-in-out infinite;
+    }
+
+    .heart-one {
+        top: 10%;
+        left: 9%;
+        font-size: 27px;
+    }
+
+    .heart-two {
+        top: 18%;
+        right: 9%;
+        font-size: 34px;
+        animation-delay: 1s;
+    }
+
+    .heart-three {
+        bottom: 13%;
+        left: 10%;
+        font-size: 30px;
+        animation-delay: 2s;
+    }
+
+    .heart-four {
+        bottom: 14%;
+        right: 10%;
+        font-size: 25px;
+        animation-delay: 0.5s;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 430px;
+        padding: 38px 26px 32px;
+        position: relative;
+        text-align: center;
+        border: 1px solid #ffffffd9;
+        border-radius: 28px;
+        background: rgba(255, 250, 248, 0.94);
+        box-shadow: 0 24px 70px rgba(104, 36, 62, 0.13);
+        animation: appear 0.8s ease both;
+    }
+
+    .eyebrow {
+        margin-bottom: 20px;
+        color: var(--rose);
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        font-weight: bold;
+        letter-spacing: 2.3px;
+    }
+
+    /* QUEEN'S PHOTO */
+    .photo-frame {
+        width: 145px;
+        height: 145px;
+        margin: 0 auto 23px;
+        padding: 5px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #e8a3b7, #a83259);
+        box-shadow: 0 9px 25px #a832592b;
+        overflow: hidden;
+    }
+
+    .queen-photo {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        border-radius: 50%;
+        background: #f8e3e9;
+    }
+
+    h1 {
+        margin-bottom: 14px;
+        color: var(--wine);
+        font-size: clamp(37px, 10vw, 48px);
+        font-weight: 500;
+        line-height: 1.12;
+        letter-spacing: -1px;
+    }
+
+    .name {
+        color: var(--rose);
+        font-style: italic;
+    }
+
+    .divider {
+        width: 48px;
+        height: 2px;
+        margin: 23px auto;
+        background: #d58ba1;
+        border-radius: 10px;
+    }
+
+    .message {
+        max-width: 320px;
+        margin: 0 auto;
+        color: #745663;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+    .button {
+        display: inline-block;
+        margin-top: 27px;
+        padding: 15px 23px;
+        border: none;
+        border-radius: 50px;
+        background: var(--wine);
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 8px 22px #68243e30;
+        transition: transform 0.2s, background 0.2s;
+    }
+
+    .button:hover {
+        background: #873452;
+        transform: translateY(-2px);
+    }
+
+    .button:active {
+        transform: scale(0.97);
+    }
+
+    .extra-message {
+        display: none;
+        margin-top: 22px;
+        padding: 18px 15px;
+        border-radius: 17px;
+        background: #f9e8ed;
+        color: var(--wine);
+        font-size: 17px;
+        font-style: italic;
+        line-height: 1.8;
+        animation: appear 0.4s ease both;
+    }
+
+    .extra-message.show {
+        display: block;
+    }
+
+    .footer {
+        margin-top: 24px;
+        color: #a17b89;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0) rotate(-5deg);
+        }
+
+        50% {
+            transform: translateY(-13px) rotate(8deg);
+        }
+    }
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 380px) {
+        body {
+            padding: 16px;
+        }
+
+        .card {
+            padding: 32px 20px 27px;
+        }
+
+        .photo-frame {
+            width: 125px;
+            height: 125px;
+        }
+
+        .message {
+            font-size: 14px;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+</style>
+
+</head><body><span class="floating-heart heart-one">✧</span>
+<span class="floating-heart heart-two">♡</span>
+<span class="floating-heart heart-three">✦</span>
+<span class="floating-heart heart-four">♡</span>
+
+<main class="card">
+
+    <p class="eyebrow">JUST A LITTLE SOMETHING 💗</p>
+
+    <!-- QUEEN'S PHOTO -->
+    <div class="photo-frame">
+        <img
+            src="queen.jpg"
+            alt="A photo of Queen"
+            class="queen-photo"
+        >
+    </div>
+
+    <h1>
+        You're really<br>
+        pretty, <span class="name">Queen.</span>
+    </h1>
+
+    <div class="divider"></div>
+
+    <p class="message">
+        And I don't just mean your face.
+        There's something about your smile, your energy,
+        and the way you carry yourself that makes you stand out.
+        You have a beauty that's hard not to notice. 💗
+    </p>
+
+    <button class="button" id="revealBtn">
+        One more thing… ♡
+    </button>
+
+    <div class="extra-message" id="extraMessage">
+        Queen, if nobody has reminded you today,
+        let me be the one to say it:
+        you're genuinely beautiful. 👑❤️
+    </div>
+
+    <p class="footer">
+        Made with a little thought of you. ☺
+    </p>
+
+</main>
+
+<script>
+    const revealBtn = document.getElementById("revealBtn");
+    const extraMessage = document.getElementById("extraMessage");
+
+    revealBtn.addEventListener("click", function () {
+        const isVisible = extraMessage.classList.toggle("show");
+
+        revealBtn.textContent = isVisible
+            ? "That's all… for now 💗"
+            : "One more thing… ♡";
+    });
+</script>
+
+</body>
+  </html>
